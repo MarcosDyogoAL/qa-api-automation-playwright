@@ -3,6 +3,9 @@
 Professional API test automation framework built with Playwright and TypeScript, following enterprise-level architecture and best practices.
 
 ---
+[![Playwright API Tests](https://github.com/MarcosDyogoAL/qa-api-automation-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/MarcosDyogoAL/qa-api-automation-playwright/actions/workflows/playwright.yml)
+
+---
 
 ## 📌 Overview
 
