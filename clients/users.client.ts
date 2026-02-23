@@ -1,18 +1,15 @@
 import { APIRequestContext } from '@playwright/test';
-import { API_CONFIG } from '../config/api.config';
-import { ENV } from '../utils/env';
+import environment from "../config/environment";
 
 export class UsersClient {
-
     constructor(private request: APIRequestContext) {}
 
-    async getUsers(page: number = 1) {
-
+    async getUsers(page: number) {
         return await this.request.get(
-            `${API_CONFIG.BASE_URL}/users?page=${page}`,
+            `${environment.baseURL}api/users?page=${page}`,
             {
                 headers: {
-                    'x-api-key': ENV.REQRES_API_KEY
+                    "x-api-key": environment.apiKey
                 }
             }
         );
@@ -21,10 +18,10 @@ export class UsersClient {
     async createUser(payload: any) {
 
         return await this.request.post(
-            `${API_CONFIG.BASE_URL}/users`,
+            `${environment.baseURL}api/users`,
             {
                 headers: {
-                    'x-api-key': ENV.REQRES_API_KEY
+                    'x-api-key': environment.apiKey
                 },
                 data: payload
             }
