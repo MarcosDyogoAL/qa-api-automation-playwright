@@ -1,4 +1,4 @@
 export default {
-    baseURL: "https://reqres.in/",
+    baseURL: "https://serverest.dev",
     apiKey: process.env.REQRES_API_KEY
 };

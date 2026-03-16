@@ -1,30 +1,31 @@
 import { APIRequestContext } from '@playwright/test';
-import environment from "../config/environment";
+import environment from '../config/environment';
 
 export class UsersClient {
+
     constructor(private request: APIRequestContext) {}
 
-    async getUsers(page: number) {
-        return await this.request.get(
-            `${environment.baseURL}api/users?page=${page}`,
-            {
-                headers: {
-                    "x-api-key": environment.apiKey
-                }
-            }
-        );
+    async listUsers() {
+        return await this.request.get(`${environment.baseURL}/usuarios`);
     }
 
-    async createUser(payload: any) {
+    async createUser(userData: any) {
+        return await this.request.post(`${environment.baseURL}/usuarios`, {
+            data: userData
+        });
+    }
 
-        return await this.request.post(
-            `${environment.baseURL}api/users`,
-            {
-                headers: {
-                    'x-api-key': environment.apiKey
-                },
-                data: payload
-            }
-        );
+    async getUserById(userId: string) {
+        return await this.request.get(`${environment.baseURL}/usuarios/${userId}`);
+    }
+
+    async updateUser(userID: string, userData: any) {
+        return await this.request.put(`${environment.baseURL}/usuarios/${userID}`, {
+            data: userData
+        });
+    }
+
+    async deleteUser(userId: string) {
+        return await this.request.delete(`${environment.baseURL}/usuarios/${userId}`);
     }
 }
