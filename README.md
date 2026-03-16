@@ -1,6 +1,6 @@
 # 🚀 QA API Automation Framework | Playwright + TypeScript
 
-Professional API test automation framework built with Playwright and TypeScript, following enterprise-level architecture and best practices.
+API test automation framework built with Playwright and TypeScript, following enterprise-level architecture and best practices.
 
 ---
 [![Playwright API Tests](https://github.com/MarcosDyogoAL/qa-api-automation-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/MarcosDyogoAL/qa-api-automation-playwright/actions/workflows/playwright.yml)
@@ -39,7 +39,6 @@ qa-api-automation-playwright
 ├── clients/        # API client layer
 ├── config/         # Environment and API configuration
 ├── data/           # Test data factory
-├── fixtures/       # Custom fixtures
 ├── tests/          # Test cases
 ├── utils/          # Utilities and helpers
 │
@@ -56,8 +55,9 @@ Current automated scenarios include:
 
 * Get users list
 * Create new user
-* Response status validation
-* Response body validation
+* Update user
+* Delete user
+* Auth user
 
 Future improvements:
 
@@ -73,7 +73,7 @@ Future improvements:
 Clone the repository:
 
 ```
-git clone https://github.com/YOUR-USERNAME/qa-api-automation-playwright.git
+git clone https://github.com/MarcosDyogoAL/qa-api-automation-playwright.git
 ```
 
 Install dependencies:
@@ -148,7 +148,7 @@ This framework follows professional automation design patterns:
 ## 👨‍💻 Author
 
 Marcos Almeida
-Senior QA Engineer | Test Automation | CI/CD | API Testing
+Senior QA | Test Automation | CI/CD | API Testing
 
 Focused on building reliable, scalable, and maintainable automation solutions.
 
